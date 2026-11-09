@@ -1,0 +1,154 @@
+{
+  "estudante": {
+    "nome": "CADU",
+    "workspaces": [
+      {
+        "codigo": "ADS0330",
+        "nome": "Programação Orientada a Objetos",
+        "professor": "Iallen Gábio",
+        "salaOuLink": "Laboratório 3",
+        "horario": "Segunda e Quarta, 19:00 - 20:40",
+        "itens": [
+          {
+            "tipo": "TRABALHO_EM_GRUPO",
+            "titulo": "Trabalho Final: AcademiaFlow",
+            "descricao": "Implementar o domínio do sistema organizador acadêmico em TypeScript com o grupo (CADU, Luan, Igor, Felipe, Elryan).",
+            "dataLimite": "2026-12-05",
+            "origem": "PROFESSOR",
+            "colegasDeEquipe": ["Luan", "Igor", "Felipe", "Elryan"],
+            "papelDoAluno": "Coordenação do domínio e da base ItemAcademico",
+            "etapas": [
+              { "titulo": "Classe base ItemAcademico", "responsavel": "CADU", "entregue": false },
+              { "titulo": "Subclasses", "responsavel": "Luan/Igor/Felipe", "entregue": false },
+              { "titulo": "Workspace e Dashboard", "responsavel": "Elryan/CADU", "entregue": false }
+            ],
+            "dataCriacao": "2026-11-09"
+          },
+          {
+            "tipo": "ATIVIDADE_PRATICA",
+            "titulo": "Lista de exercícios — Herança e Polimorfismo",
+            "descricao": "Resolver a lista da unidade sobre herança, polimorfismo e classes abstratas.",
+            "dataLimite": "2026-11-12",
+            "origem": "PROFESSOR",
+            "dataCriacao": "2026-11-02",
+            "checklist": [
+              { "descricao": "Questões 1 a 5", "feita": true },
+              { "descricao": "Questões 6 a 10", "feita": false }
+            ]
+          },
+          {
+            "tipo": "LEMBRETE",
+            "titulo": "Prova escrita 2 — leva documento com foto",
+            "descricao": "Prova da disciplina leva documento oficial com foto.",
+            "dataAviso": "2026-11-24",
+            "fixado": true,
+            "etiqueta": "Aviso de Aula",
+            "dataCriacao": "2026-11-03"
+          }
+        ]
+      },
+      {
+        "codigo": "ADS0304",
+        "nome": "Banco de Dados I",
+        "professor": "Professor BD",
+        "salaOuLink": null,
+        "horario": "Terça e Quinta, 19:00 - 20:40",
+        "itens": [
+          {
+            "tipo": "ATIVIDADE_PRATICA",
+            "titulo": "Modelagem ER — Projeto do banco da padaria",
+            "descricao": "Modelar entidade-relacionamento e normalizar até 3FN.",
+            "dataLimite": "2026-11-06",
+            "origem": "PROFESSOR",
+            "dataCriacao": "2026-10-28"
+          },
+          {
+            "tipo": "ATIVIDADE_PRATICA",
+            "titulo": "Autoestudo — Joins avançados",
+            "descricao": "Revisar LEFT/RIGHT/FULL JOIN com exercícios próprios.",
+            "dataLimite": "2026-11-13",
+            "origem": "AUTOESTUDO",
+            "dataCriacao": "2026-11-01",
+            "checklist": [{ "descricao": "Assistir material da aula", "feita": false }]
+          },
+          {
+            "tipo": "LEMBRETE",
+            "titulo": "Biblioteca: reservar livro de SQL",
+            "descricao": "Reservar exemplar na biblioteca da unidade.",
+            "dataAviso": "2026-11-11",
+            "fixado": false,
+            "etiqueta": "Material Necessário",
+            "dataCriacao": "2026-11-04"
+          }
+        ]
+      },
+      {
+        "codigo": "ADS0402",
+        "nome": "Engenharia de Software",
+        "professor": "Professor ES",
+        "salaOuLink": null,
+        "horario": "Quarta, 20:50 - 22:30",
+        "itens": [
+          {
+            "tipo": "TRABALHO_EM_GRUPO",
+            "titulo": "Refatoração de código legado em grupos",
+            "descricao": "Aplicar refatorações no código legado do professor e entregar relatório.",
+            "dataLimite": "2026-11-20",
+            "origem": "PROFESSOR",
+            "colegasDeEquipe": ["Colega A", "Colega B", "Colega C"],
+            "papelDoAluno": "Pesquisa bibliográfica",
+            "etapas": [
+              { "titulo": "Identificar code smells", "responsavel": "todos", "entregue": true },
+              { "titulo": "Aplicar refatorações", "responsavel": "Coleta A", "entregue": false },
+              { "titulo": "Relatório final", "responsavel": "Coleta B", "entregue": false }
+            ],
+            "dataCriacao": "2026-10-30"
+          },
+          {
+            "tipo": "ATIVIDADE_PRATICA",
+            "titulo": "Leitura: caps. 1 e 2 (RSL para Eng. Software)",
+            "descricao": "Leitura da bibliografia básica para a atividade do Classroom.",
+            "dataLimite": "2026-11-15",
+            "origem": "PROFESSOR",
+            "dataCriacao": "2026-10-12",
+            "dataConclusao": "2026-11-08"
+          },
+          {
+            "tipo": "LEMBRETE",
+            "titulo": "Apresentação dos grupos: ordem sorteada",
+            "descricao": "Confira a ordem no Classroom antes do dia 20.",
+            "dataAviso": "2026-11-20",
+            "fixado": false,
+            "etiqueta": "Recado do Professor",
+            "dataCriacao": "2026-11-05"
+          }
+        ]
+      },
+      {
+        "codigo": "ADS0298",
+        "nome": "Sistemas Operacionais",
+        "professor": "Professor SO",
+        "salaOuLink": null,
+        "horario": "Segunda, 20:50 - 22:30",
+        "itens": [
+          {
+            "tipo": "ATIVIDADE_PRATICA",
+            "titulo": "Escalonamento — simulação de algoritmos",
+            "descricao": "Implementar a simulação de FIFO, SJF e Round Robin.",
+            "dataLimite": "2026-11-18",
+            "origem": "PROFESSOR",
+            "dataCriacao": "2026-11-04"
+          },
+          {
+            "tipo": "ATIVIDADE_PRATICA",
+            "titulo": "Autoestudo — Revisar anotações do módulo 1",
+            "descricao": "Revisar anotações para as duas avaliações escritas.",
+            "dataLimite": "2026-11-09",
+            "origem": "AUTOESTUDO",
+            "dataCriacao": "2026-10-25"
+          }
+        ]
+      }
+    ]
+  }
+}

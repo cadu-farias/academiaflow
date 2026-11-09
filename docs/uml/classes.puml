@@ -1,0 +1,100 @@
+@startuml classes
+skinparam classAttributeIconSize 0
+skinparam class {
+  BackgroundColor White
+  ArrowColor Black
+  BorderColor Black
+}
+title AcademiaFlow — Diagrama de Classes do Domínio
+
+abstract class ItemAcademico {
+  # id: string
+  # titulo: string
+  # descricao: string
+  # dataCriacao: Date
+  # workspaceId: string
+  + validarTitulo(titulo: string): void
+  + validarDescricao(descricao: string): void
+  + getId(): string
+  + getTitulo(): string
+  + getWorkspaceId(): string
+  + resumo(): string
+  + {abstract} obterCategoria(): string
+  + {abstract} estaPendente(): boolean
+  + {abstract} obterExibicaoFormatada(): string
+}
+
+class AtividadePratica {
+  - dataLimite: Date
+  - concluida: boolean = false
+  - dataConclusao: Date?
+  - origem: "PROFESSOR" | "AUTOESTUDO"
+  - checklist: Array<ItemChecklist>
+  - linkEntrega: string?
+  + marcarComoConcluida(): void
+  + verificarSeAtrasada(): boolean
+  + calcularDiasRestantes(): number
+  + adicionarItemChecklist(descricao: string): void
+}
+
+class TrabalhoEmGrupo {
+  - dataLimite: Date
+  - concluida: boolean
+  - dataConclusao: Date?
+  - colegasDeEquipe: string[]
+  - papelDoAluno: string
+  - etapas: Array<EtapaTrabalho>
+  + marcarEtapaComoEntregue(tituloEtapa: string): void
+  + progressoPercentual(): number
+}
+
+class Lembrete {
+  - dataAviso: Date?
+  - fixado: boolean
+  - etiqueta: string
+  + alternarFixacao(): void
+}
+
+class Workspace {
+  - codigo: string
+  - nome: string
+  - professor: string
+  - salaOuLink: string?
+  - horario: string?
+  - itens: ItemAcademico[] «protegida»
+  + adicionarItem(item: ItemAcademico): void
+  + buscarItem(id: string): ItemAcademico?
+  + removerItem(id: string): boolean
+  + listarItens(): ItemAcademico[] «cópia»
+  + listarPendentes(): ItemAcademico[]
+  + listarConcluidos(): ItemAcademico[]
+  + listarEmAtraso(): AtividadePratica[]
+  + totalAtividades(): number
+  + taxaConclusao(): number «%»
+  + listarFixadosNoTopo(): Lembrete[]
+}
+
+class Estudante {
+  - nome: string
+  - workspaces: Workspace[] «protegida»
+  + adicionarWorkspace(w: Workspace): void
+  + listarWorkspaces(): Workspace[] «cópia»
+  + proximosPrazosDaSemana(): AtividadePratica[] «7 dias»
+  + atividadesEmAtraso(): AtividadePratica[]
+  + muralFixados(): Lembrete[]
+  + concluidasNaSemana(): number
+  + concluidasNoMes(): number
+  + pendentesPorDisciplina(): Map<string, number>
+}
+
+class DadosIniciais {
+}
+
+ItemAcademico <|-- AtividadePratica
+ItemAcademico <|-- TrabalhoEmGrupo
+ItemAcademico <|-- Lembrete
+
+Workspace o-- "0..*" ItemAcademico : gerencia (agregação)
+Estudante o-- "1..*" Workspace : gerencia (agregação)
+Workspace ..> DadosIniciais : carrega JSON
+@enduml

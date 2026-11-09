@@ -1,0 +1,20 @@
+{
+  "name": "academiaflow",
+  "version": "0.1.0",
+  "description": "Sistema de Organização de Atividades e Lembretes Acadêmicos — Trabalho Final de POO (TypeScript)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/consultas/consultas.test.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}
