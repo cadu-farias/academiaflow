@@ -14,13 +14,18 @@ Estudante organiza o semestre letivo em **Workspaces de Disciplina**, cada um co
 | Felipe | `Lembrete` + UML + README | Igor / Elryan |
 | Elryan | `Workspace` | Felipe / CADU |
 
+## Pré-requisitos
+
+- Node.js LTS (node + npm)
+- Git
+
 ## Execução
 
 ```bash
-npm install
-npm start      # demo/driver do domínio
-npm run test   # testes unitários
-npm run typecheck
+npm install    # baixa typescript, tsx e @types/node
+npm start      # driver de demonstração do domínio (console)
+npm run build  # compila para dist/
+npm run typecheck  # valida tipagem estrita, zero any
 ```
 
 ## Estrutura

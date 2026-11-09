@@ -31,7 +31,7 @@ O produto **não** armazena boletins nem calcula notas: o foco é o gerenciament
 - Coleções protegidas (encapsulamento) e agregação via `Workspace`
 - Consultas: filtros, ordenações, busca textual, dashboard
 - Dados iniciais realistas para demonstração
-- Testes unitários do domínio
+- Validação do comportamento via driver de execução no console (`npm start`)
 
 ### 3.2 Fora do escopo desta fase (Camada de Visão)
 
@@ -92,7 +92,7 @@ Pilares aplicados: Encapsulamento + invariantes (RN-01/02/08), Herança + Polimo
 1. Repositório Git público com histórico de commits e `README.md` (`npm install` + `npm start`)
 2. Diagrama UML em PlantUML (`docs/uml/classes.puml` + imagem exportada)
 3. `dados-iniciais.json`
-4. Testes unitários do domínio
+4. Driver de demonstração via console (`src/dominio/demo.ts`, `npm start`)
 
 ## 8. Critérios de Aceite
 
