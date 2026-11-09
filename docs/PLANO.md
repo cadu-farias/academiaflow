@@ -83,7 +83,7 @@ Cada PR precisa de **1 aprovação do revisor designado** antes do merge.
 ## Definição de Pronto (DoD) por task de domínio
 
 - [ ] `strict` sem `any`, sem erros de `tsc --noEmit`
-- [ ] Comportamento demonstrável via driver/console (`npm start`)
+- [ ] Comportamento demonstrável via driver (npm start, console do navegador)
 - [ ] Zero referência a DOM/localStorage no domínio (RN-09)
 - [ ] UML atualizado caso a classe/assinatura mudar
 - [ ] Revisão aprovada pelo revisor designado

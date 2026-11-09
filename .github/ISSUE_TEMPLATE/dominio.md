@@ -10,7 +10,7 @@ labels: ""
 
 ## O que fazer
 - [ ] Implementar em `src/dominio/`
-- [ ] Demonstração via driver/console (`npm start`)
+- [ ] Demonstração via driver (npm start, console do navegador)
 - [ ] UML atualizado
 
 ## Critérios

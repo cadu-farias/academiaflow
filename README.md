@@ -22,10 +22,10 @@ Estudante organiza o semestre letivo em **Workspaces de Disciplina**, cada um co
 ## Execução
 
 ```bash
-npm install    # baixa typescript, tsx e @types/node
-npm start      # driver de demonstração do domínio (console)
-npm run build  # compila para dist/
-npm run typecheck  # valida tipagem estrita, zero any
+npm install          # baixa parcel e typescript
+npm start            # Parcel: servidor em http://localhost:1234 (saída no console do navegador, F12)
+npm run build        # build de produção em dist
+npm run typecheck    # valida tipagem estrita, zero any
 ```
 
 ## Estrutura

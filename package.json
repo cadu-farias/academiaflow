@@ -5,13 +5,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "tsx src/dominio/demo.ts",
-    "build": "tsc",
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir dist",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/node": "^22.10.0",
-    "tsx": "^4.19.0",
+    "parcel": "^2.16.0",
     "typescript": "^5.7.0"
   }
 }
