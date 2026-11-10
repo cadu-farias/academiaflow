@@ -20,6 +20,18 @@ export class AtividadePratica extends ItemAcademico {
     this.linkEntrega = linkEntrega;
     this.dataConclusao = dataConclusao;
   }
+  getDataLimite(): Date {
+    return this.dataLimite;
+  }
+  getDataConclusao(): Date {
+    return this.dataConclusao!;
+  }
+  getOrigem(): string {
+    return this.origem;
+  }
+  getLinkEntrega(): string {
+    return this.linkEntrega!;
+  }
   obterCategoria(): string {
     return "";
   }
