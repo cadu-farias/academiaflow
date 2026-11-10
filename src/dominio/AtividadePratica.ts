@@ -36,7 +36,7 @@ export class AtividadePratica extends ItemAcademico {
     return "";
   }
   estaPendente(): boolean {
-    return this.concluida === false;
+    return !this.concluida;
   }
   obterExibicaoFormatada(): string {
     return `Título: ${this.getTitulo()} \nDescrição: ${this.getDescricao()}\nData de criação: ${this.getDataCriacao().getDate()}/${this.getDataCriacao().getMonth() + 1}/${this.getDataCriacao().getFullYear()}\nWorkspace Id:${this.getWorkspaceId()}`;
