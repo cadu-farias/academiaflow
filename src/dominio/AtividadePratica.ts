@@ -39,7 +39,7 @@ export class AtividadePratica extends ItemAcademico {
     return !this.concluida;
   }
   obterExibicaoFormatada(): string {
-    return `Título: ${this.getTitulo()} \nDescrição: ${this.getDescricao()}\nData de criação: ${this.getDataCriacao().getDate()}/${this.getDataCriacao().getMonth() + 1}/${this.getDataCriacao().getFullYear()}\nWorkspace Id:${this.getWorkspaceId()}`;
+    return `Título: ${this.getTitulo()} \nDescrição: ${this.getDescricao()}\nData de criação: ${this.getDataCriacao().getDate()}/${this.getDataCriacao().getMonth() + 1}/${this.getDataCriacao().getFullYear()}\nWorkspace Id:${this.getWorkspaceId()}\nData limite:${this.getDataLimite()}\nData de conclusão:${this.getDataConclusao()}\nOrigem:${this.getOrigem()}\nLink de entrega:${this.getLinkEntrega()}\nCategoria:${this.obterCategoria()}\nPendente:${this.estaPendente() ? "SIM" : "NÃO"}`;
   }
   marcarComoConcluida() {
     this.dataConclusao = new Date();
