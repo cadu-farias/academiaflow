@@ -33,4 +33,8 @@ export class AtividadePratica extends ItemAcademico {
     this.dataConclusao = new Date();
     this.concluida = true;
   }
+  verificarSeAtrasada(): boolean {
+    console.log(this.dataLimite.getTime());
+    return this.estaPendente() && this.dataLimite.getTime() < Date.now();
+  }
 }
