@@ -27,7 +27,7 @@ export class AtividadePratica extends ItemAcademico {
     return this.concluida === false;
   }
   obterExibicaoFormatada(): string {
-    return "";
+    return `Título: ${this.getTitulo()} \nDescrição: ${this.getDescricao()}\nData de criação: ${this.getDataCriacao().getDate()}/${this.getDataCriacao().getMonth() + 1}/${this.getDataCriacao().getFullYear()}\nWorkspace Id:${this.getWorkspaceId()}`;
   }
   marcarComoConcluida() {
     this.dataConclusao = new Date();
