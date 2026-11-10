@@ -1,51 +1,53 @@
-abstract class ItemAcademico {
-    private id:string;
+export abstract class ItemAcademico {
+  private id: string;
 
-    constructor(private titulo:string, private descricao:string, private dataCriacao:Date,private workspaceId:string){
-        if(!this.validarTitulo(titulo)){
-            throw new Error("Titulo inválido");
-        }
-        if(!this.validarDescricao(descricao)){
-            throw new Error("Descrição inválida")
-        }
-
-        this.id = `i-${Date.now()}`;
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.workspaceId = workspaceId;
+  constructor(
+    private titulo: string,
+    private descricao: string,
+    private dataCriacao: Date,
+    private workspaceId: string,
+  ) {
+    if (!this.validarTitulo(titulo)) {
+      throw new Error("Titulo inválido");
+    }
+    if (!this.validarDescricao(descricao)) {
+      throw new Error("Descrição inválida");
     }
 
-    validarTitulo(titulo:string):boolean{
-       return titulo.trim().length > 3 ? true : false;
-    }
+    this.id = `i-${Date.now()}`;
+    this.titulo = titulo;
+    this.descricao = descricao;
+    this.workspaceId = workspaceId;
+  }
 
-    validarDescricao(descricao:string):boolean{
-       return descricao.trim().length > 3 ? true : false;
-    }
+  validarTitulo(titulo: string): boolean {
+    return titulo.trim().length > 3 ? true : false;
+  }
 
-    getId():string{
-        return this.id;
-    }
+  validarDescricao(descricao: string): boolean {
+    return descricao.trim().length > 3 ? true : false;
+  }
 
-    getTitulo(): string{
-        return this.titulo;
-    }
+  getId(): string {
+    return this.id;
+  }
 
-    getDescricao():string{
-        return this.descricao;
-    }
-    getDataCriacao():Date{
-        return this.dataCriacao;
-    }
+  getTitulo(): string {
+    return this.titulo;
+  }
 
-    getWorkspaceId(): string{
-        return this.workspaceId;
-    }
+  getDescricao(): string {
+    return this.descricao;
+  }
+  getDataCriacao(): Date {
+    return this.dataCriacao;
+  }
 
-    abstract obterCategoria(): string;
-    abstract estaPendente(): boolean;
-    abstract obterExibicaoFormatada(): string;
-    
+  getWorkspaceId(): string {
+    return this.workspaceId;
+  }
+
+  abstract obterCategoria(): string;
+  abstract estaPendente(): boolean;
+  abstract obterExibicaoFormatada(): string;
 }
-
-
