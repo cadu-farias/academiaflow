@@ -10,8 +10,8 @@ export class AtividadePratica extends ItemAcademico {
     dataCriacao: Date,
     workspaceId: string,
     descricao: string,
-    private linkEntrega?: string,
-    private dataConclusao?: Date,
+    private linkEntrega?: string | undefined,
+    private dataConclusao?: Date | undefined,
   ) {
     super(titulo, descricao, dataCriacao, workspaceId);
     this.dataLimite = dataLimite;
@@ -23,14 +23,14 @@ export class AtividadePratica extends ItemAcademico {
   getDataLimite(): Date {
     return this.dataLimite;
   }
-  getDataConclusao(): Date {
-    return this.dataConclusao!;
+  getDataConclusao(): Date | undefined {
+    return this.dataConclusao;
   }
   getOrigem(): string {
     return this.origem;
   }
-  getLinkEntrega(): string {
-    return this.linkEntrega!;
+  getLinkEntrega(): string | undefined {
+    return this.linkEntrega;
   }
   obterCategoria(): string {
     return "Atividade Prática";
