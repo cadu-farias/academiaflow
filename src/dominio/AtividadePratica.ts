@@ -3,22 +3,21 @@ import { ItemAcademico } from "./ItemAcademico";
 
 export class AtividadePratica extends ItemAcademico {
   private concluida: boolean;
+  private dataConclusao?: Date | undefined;
   constructor(
     private dataLimite: Date,
     private origem: Origem,
     titulo: string,
-    dataCriacao: Date,
     workspaceId: string,
     descricao: string,
     private linkEntrega?: string | undefined,
-    private dataConclusao?: Date | undefined,
   ) {
-    super(titulo, descricao, dataCriacao, workspaceId);
+    super(titulo, descricao, workspaceId);
     this.dataLimite = dataLimite;
     this.concluida = false;
     this.origem = origem;
     this.linkEntrega = linkEntrega;
-    this.dataConclusao = dataConclusao;
+    this.dataConclusao = undefined;
   }
   getDataLimite(): Date {
     return this.dataLimite;
