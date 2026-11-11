@@ -33,7 +33,7 @@ export class AtividadePratica extends ItemAcademico {
     return this.linkEntrega!;
   }
   obterCategoria(): string {
-    return "";
+    return "Atividade Prática";
   }
   estaPendente(): boolean {
     return !this.concluida;
