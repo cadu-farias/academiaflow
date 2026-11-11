@@ -55,4 +55,9 @@ export class AtividadePratica extends ItemAcademico {
     console.log(this.dataLimite.getTime());
     return this.estaPendente() && this.dataLimite.getTime() < Date.now();
   }
+  calcularDiasRestantes() {
+    const milissegundosPorDia = 24 * 60 * 60 * 1000;
+    const tempoRestante = this.getDataLimite().getTime() - Date.now();
+    return Math.ceil(tempoRestante / milissegundosPorDia);
+  }
 }
