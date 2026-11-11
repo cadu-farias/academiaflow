@@ -1,10 +1,10 @@
 export abstract class ItemAcademico {
   private id: string;
+  private dataCriacao: Date
 
   constructor(
     private titulo: string,
     private descricao: string,
-    private dataCriacao: Date,
     private workspaceId: string,
   ) {
     if (!this.validarTitulo(titulo)) {
@@ -18,6 +18,7 @@ export abstract class ItemAcademico {
     this.titulo = titulo;
     this.descricao = descricao;
     this.workspaceId = workspaceId;
+    this.dataCriacao = new Date();
   }
 
   validarTitulo(titulo: string): boolean {
