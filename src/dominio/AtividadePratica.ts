@@ -39,7 +39,13 @@ export class AtividadePratica extends ItemAcademico {
     return !this.concluida;
   }
   obterExibicaoFormatada(): string {
-    return `Título: ${this.getTitulo()} \nDescrição: ${this.getDescricao()}\nData de criação: ${this.getDataCriacao().getDate()}/${this.getDataCriacao().getMonth() + 1}/${this.getDataCriacao().getFullYear()}\nWorkspace Id:${this.getWorkspaceId()}\nData limite:${this.getDataLimite()}\nData de conclusão:${this.getDataConclusao()}\nOrigem:${this.getOrigem()}\nLink de entrega:${this.getLinkEntrega()}\nCategoria:${this.obterCategoria()}\nPendente:${this.estaPendente() ? "SIM" : "NÃO"}`;
+    const dataConclusao =
+      this.getDataConclusao()?.toLocaleDateString("pt-BR") ??
+      "Ainda não concluída";
+
+    const linkEntrega = this.getLinkEntrega() || "Sem link de entrega";
+
+    return `Título: ${this.getTitulo()} \nDescrição: ${this.getDescricao()}\nData de criação: ${this.getDataCriacao().getDate()}/${this.getDataCriacao().getMonth() + 1}/${this.getDataCriacao().getFullYear()}\nWorkspace Id:${this.getWorkspaceId()}\nData limite:${this.getDataLimite()}\nData de conclusão:${dataConclusao}\nOrigem:${this.getOrigem()}\nLink de entrega:${linkEntrega}\nCategoria:${this.obterCategoria()}\nPendente:${this.estaPendente() ? "SIM" : "NÃO"}`;
   }
   marcarComoConcluida() {
     this.dataConclusao = new Date();
